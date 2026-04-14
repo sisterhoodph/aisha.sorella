@@ -293,13 +293,13 @@ main {
   }
 
   .review-container {
-    height: 300px;
+    min-height: 320px;
     max-width: 100%;
   }
 
   .review-carousel {
-    margin-top: 12px;
-    gap: 10px;
+    margin-top: 22px;
+    gap: 12px;
   }
 
   .contact-panel {
