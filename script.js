@@ -22,4 +22,4 @@ dots.forEach((dot, index) => {
 setInterval(() => {
   currentIndex = (currentIndex + 1) % dots.length;
   showReview(currentIndex);
-}, 2000);
+}, 5000);
