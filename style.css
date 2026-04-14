@@ -73,7 +73,7 @@ main {
 
 .section-about p,
 .review-card p,
-.section-contact p {
+.section-contact p {  
   margin: 0;
   line-height: 1.8;
   color: #332d3c;
