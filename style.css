@@ -11,7 +11,14 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: #f2ecf6;
+  background-color: #fee8f4;
+  background-image:
+    linear-gradient(180deg, rgba(255,216,234,0.98) 0%, rgba(249,198,222,0.95) 18%, rgba(248,176,210,0.92) 36%, rgba(245,169,213,0.9) 50%, rgba(246,199,231,0.9) 76%, rgba(254,232,244,0.96) 100%),
+    radial-gradient(circle at top left, rgba(255,255,255,0.65) 0%, transparent 36%),
+    radial-gradient(circle at bottom right, rgba(255,255,255,0.4) 0%, transparent 42%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' fill='none'/%3E%3Cg fill='%23ffffff' opacity='0.04'%3E%3Ccircle cx='2' cy='3' r='0.5'/%3E%3Ccircle cx='5' cy='8' r='0.5'/%3E%3Ccircle cx='9' cy='2' r='0.5'/%3E%3Ccircle cx='12' cy='12' r='0.5'/%3E%3Ccircle cx='16' cy='5' r='0.5'/%3E%3Ccircle cx='20' cy='9' r='0.5'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: auto, auto, auto, 24px 24px;
   color: #1b1122;
 }
 
@@ -61,7 +68,7 @@ main {
 .section-contact h2 {
   margin: 0 0 20px;
   font-size: clamp(2rem, 2.4vw, 3.2rem);
-  line-height: 1.05;
+  line-height: 1;
 }
 
 .section-about p,
@@ -152,7 +159,7 @@ main {
   justify-content: center;
   padding: 12px 22px;
   border-radius: 999px;
-  background: #741b7a;
+  background: #2f8f6b;
   color: #fff;
   font-weight: 700;
   text-decoration: none;
@@ -180,7 +187,7 @@ main {
 }
 
 .section-contact {
-  background: linear-gradient(135deg, #ffe0f5 0%, #fcd2f7 50%, #ffd5d6 100%);
+  background: #ffd1e3;
   padding: 64px 48px;
 }
 
