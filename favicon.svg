@@ -1,0 +1,7 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://w3.org">
+  <!-- Purple Circular Border -->
+  <circle cx="50" cy="50" r="48" stroke="#6a0dad" stroke-width="2" fill="white" />
+  
+  <!-- Red Bold Letter S -->
+  <text x="50" y="50" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="70" fill="red">S</text>
+</svg>
