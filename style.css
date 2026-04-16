@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿:root {
+﻿﻿:root {
   color-scheme: light;
   font-family: "Inter", "Segoe UI", sans-serif;
   font-size: 16px;
@@ -267,6 +267,25 @@ main {
 .social-links a.whatsapp {
   background: #25d366;
 }
+
+.social-links a {
+  font-size: 24px; /* Adjust size here */
+  margin-right: 15px;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.social-links a:hover {
+  opacity: 0.8;
+}
+
+/* Official Brand Colors */
+.facebook { color: #1877F2; }
+.x { color: #000000; }
+.instagram { color: #E4405F; }
+.telegram { color: #24A1DE; }
+.whatsapp { color: #25D366; }
+
 
 @media (max-width: 900px) {
   .section-about {
