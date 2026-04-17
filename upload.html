@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload Image</title>
+</head>
+<body>
+
+<h2>Upload / Replace Image</h2>
+
+<input type="file" id="fileInput"><br><br>
+
+<select id="filename">
+  <option value="image1.jpg">image1.jpg</option>
+  <option value="image2.jpg">image2.jpg</option>
+  <option value="image3.jpg">image3.jpg</option>
+  <option value="image4.jpg">image4.jpg</option>
+  <option value="image5.jpg">image5.jpg</option>
+</select>
+
+<br><br>
+
+<button onclick="upload()">Upload</button>
+
+<p id="status"></p>
+
+<script>
+async function upload() {
+  const file = document.getElementById("fileInput").files[0];
+  const filename = document.getElementById("filename").value;
+
+  if (!file) {
+    alert("Select a file");
+    return;
+  }
+
+  const base64 = await toBase64(file);
+
+  document.getElementById("status").innerText = "Uploading...";
+
+  try {
+    const res = await fetch("https://github-image-api.vercel.app/api/upload", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        filename: filename,
+        content: base64.split(",")[1]
+      })
+    });
+
+    if (res.ok) {
+      document.getElementById("status").innerText = "Success!";
+    } else {
+      document.getElementById("status").innerText = "Failed!";
+    }
+
+  } catch (err) {
+    document.getElementById("status").innerText = err.message;
+  }
+}
+
+function toBase64(file) {
+  return new Promise((res, rej) => {
+    const reader = new FileReader();
+    reader.onload = () => res(reader.result);
+    reader.onerror = rej;
+    reader.readAsDataURL(file);
+  });
+}
+</script>
+
+</body>
+</html>
